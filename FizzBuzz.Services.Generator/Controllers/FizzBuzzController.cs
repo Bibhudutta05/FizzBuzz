@@ -1,5 +1,6 @@
 using FizzBuzz.Services.Generator.Model;
 using FizzBuzz.Services.Generator.Service;
+using FizzBuzz.Services.Generator.Utility;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FizzBuzz.Services.Generator.Controllers
@@ -20,7 +21,7 @@ namespace FizzBuzz.Services.Generator.Controllers
         {
             try
             {
-                return FizzBuzzFactory.GetGeneratorInstance("FizzBuzz").Generator(model.InpurArray);
+                return FizzBuzzFactory.GetGeneratorInstance(Constants.FizzBuzz).Generator(model.InpurArray);
             }
             catch (Exception ex)
             {

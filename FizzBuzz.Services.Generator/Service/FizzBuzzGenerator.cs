@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz.Services.Generator.Service
+﻿using FizzBuzz.Services.Generator.Utility;
+
+namespace FizzBuzz.Services.Generator.Service
 {
     public class FizzBuzzGenerator : IFizzBuzz
     {
@@ -19,19 +21,19 @@
                         if (inputNumber % 3 == 0 && inputNumber % 5 == 0)
                         {
                             // Add "FizzBuzz" to the result list 
-                            result.Add("FizzBuzz");
+                            result.Add(Constants.FizzBuzz);
                         }
                         // Check if i is divisible by 3 
                         else if (inputNumber % 3 == 0)
                         {
                             // Add "Fizz" to the result list 
-                            result.Add("Fizz");
+                            result.Add(Constants.Fizz);
                         }
                         // Check if i is divisible by 5 
                         else if (inputNumber % 5 == 0)
                         {
                             // Add "Buzz" to the result list 
-                            result.Add("Buzz");
+                            result.Add(Constants.Buzz);
                         }
                         else
                         {
@@ -43,7 +45,7 @@
                     else
                     {
                         // not a number
-                        result.Add("Invalid item");
+                        result.Add(Constants.Invalid);
                     }
                 }
                 return result;
