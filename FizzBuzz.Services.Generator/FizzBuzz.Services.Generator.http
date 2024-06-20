@@ -1,0 +1,6 @@
+@FizzBuzz.Services.Generator_HostAddress = http://localhost:5049
+
+GET {{FizzBuzz.Services.Generator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

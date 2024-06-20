@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D9398336-6C9D-4622-B7B0-CF4E83353F6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{ABB496ED-30D1-4743-B07E-33B9CD2DDF9D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzz.Services.Generator", "FizzBuzz.Services.Generator\FizzBuzz.Services.Generator.csproj", "{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA72F96F-DD94-4D4A-8458-FDF4154D1CA2} = {D9398336-6C9D-4622-B7B0-CF4E83353F6A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {188263AF-5D4D-4591-A92F-D0A54ABDD650}
+	EndGlobalSection
+EndGlobal
