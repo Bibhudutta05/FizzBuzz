@@ -1,5 +1,11 @@
+using FizzBuzz.Services.Generator.Controllers;
+using FizzBuzz.Services.Generator.Model;
 using FizzBuzz.Services.Generator.Service;
 using FizzBuzz.Services.Generator.Utility;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.TestPlatform.Utilities;
+using Moq;
 using Newtonsoft.Json;
 using System.Reflection;
 
@@ -26,6 +32,27 @@ namespace FizzBuzz.UnitTest
               "Invalid item",
               "Divided 23 by 3, Divided 23 by 5"
         };
+
+        private readonly Mock<ILogger<FizzBuzzController>> _mockRepo;
+        private readonly FizzBuzzController _controller;
+        public UnitTest()
+        {
+            _mockRepo = new Mock<ILogger<FizzBuzzController>>();
+            _controller = new FizzBuzzController(_mockRepo.Object);
+        }
+
+        [Fact]
+        public void Test_Api()
+        {
+            FizzBuzzModel model = new FizzBuzzModel()
+            {
+                InpurArray = MultileDataSet
+            };
+            var result = _controller.Generate(model);
+            Assert.NotNull(result);
+            Assert.Equal(MultileDataSet.Count(), result.Count());
+            Assert.Equal(MultileDataSet.ToString(), result.ToString());
+        }
 
         [Fact]
         public void TestGenerate_SingleInvalidEntry()
