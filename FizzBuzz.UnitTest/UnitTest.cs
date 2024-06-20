@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace FizzBuzz.UnitTest
 {
-    public class UnitTest1
+    public class UnitTest
     {
         List<string> SingleInvalidDataSet = new List<string>
         {
