@@ -17,7 +17,7 @@ namespace FizzBuzz.Services.Generator.Service
                     int inputNumber;
                     if (!string.IsNullOrEmpty(input) && int.TryParse(input, out inputNumber))
                     {
-                        Common.CheckDivisibilty(inputNumber, out result);
+                        result.Add(Common.CheckDivisibilty(inputNumber));
                     }
                     else
                     {
